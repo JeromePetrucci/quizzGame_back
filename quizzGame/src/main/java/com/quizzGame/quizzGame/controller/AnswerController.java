@@ -37,7 +37,6 @@ public class AnswerController {
     @CrossOrigin(origins = "*")
     @PostMapping("/addAnswer")
     public void addAnswer(@RequestBody AnswerModel answer) {
-        System.out.println("test" + answer.getAnswer());
         aService.addAnswer(answer);
     }
     

@@ -13,14 +13,12 @@ public class AnswerService {
     private AnswerRepo aRepo;
 
     public void addAnswer( AnswerModel newAnswer){
-        System.out.println("Answer saving "+ newAnswer.getAnswer());
         AnswerModel createAnswer= aRepo.save(newAnswer);
         System.out.println("Answer saved "+ createAnswer.getAnswer());
     }
 
     public Iterable<AnswerModel> getStat(){
         Iterable<AnswerModel> listAnswer = aRepo.findAll();
-        System.out.println(listAnswer);
         return listAnswer;
     }
     

@@ -29,7 +29,7 @@ public class QuestionService {
         System.out.println(question);
         Optional<QuestionModel> quest = qRepo.findByQuestion(question);
         if (quest.isPresent()){
-            System.out.println(quest.get().getQuestion());
+            //System.out.println(quest.get().getQuestion());
             return quest.get();
         }
         else {

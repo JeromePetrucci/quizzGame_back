@@ -7,6 +7,7 @@ import lombok.Setter;
 @Setter
 public class QuestionDTO {
 
+    
     private String category;
 
     private String id;

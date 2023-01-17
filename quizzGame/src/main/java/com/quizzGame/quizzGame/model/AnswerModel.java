@@ -27,5 +27,8 @@ public class AnswerModel {
 
     @Column
     private Boolean answer;
- 
+
+    @Column
+    private Integer asked;
+
 }

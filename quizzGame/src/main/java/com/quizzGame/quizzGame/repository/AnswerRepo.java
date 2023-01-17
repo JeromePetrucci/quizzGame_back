@@ -10,6 +10,6 @@ import com.quizzGame.quizzGame.model.AnswerModel;
 @Repository
 
 public interface AnswerRepo extends CrudRepository<AnswerModel , Long> {
-    public Optional<AnswerModel> findById( Long id);
+    public Optional<AnswerModel> findById( String id);
     
 }

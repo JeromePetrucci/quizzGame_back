@@ -5,10 +5,10 @@ import java.util.Optional;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.quizzGame.quizzGame.model.AnswerModel;
+import com.quizzGame.quizzGame.model.CapitalModel;
 
 @Repository
-public interface AnswerRepo extends CrudRepository<AnswerModel , Long> {
-    public Optional<AnswerModel> findById( String id);
+public interface CapitalRepo extends CrudRepository<CapitalModel , Long> {
+    public Optional<CapitalModel> findById( String id);
     
 }

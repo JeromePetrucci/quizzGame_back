@@ -8,26 +8,19 @@ import jakarta.persistence.Id;
 
 import lombok.Getter;
 import lombok.Setter;
-
 @Entity
-@Table(name = "answer")
+@Table(name = "capitals")
 @Getter
 @Setter
-public class AnswerModel {
+public class CapitalModel {
 
     @Id
-    private String id;
+    private Integer id;
 
     @Column
-    private String category;
+    private String country;
 
     @Column
-    private String difficulty;
-
-    @Column
-    private Boolean answer;
-
-    @Column
-    private Integer asked;
+    private String capital;
 
 }

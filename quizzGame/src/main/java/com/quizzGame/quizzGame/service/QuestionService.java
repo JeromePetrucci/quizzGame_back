@@ -5,8 +5,10 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.quizzGame.quizzGame.model.CapitalModel;
 import com.quizzGame.quizzGame.model.QuestionDTO;
 import com.quizzGame.quizzGame.model.QuestionModel;
+import com.quizzGame.quizzGame.repository.CapitalRepo;
 import com.quizzGame.quizzGame.repository.QuizzGameRepo;
 
 
@@ -15,6 +17,10 @@ public class QuestionService {
 
     @Autowired
     private QuizzGameRepo qRepo;
+
+    @Autowired
+    private CapitalRepo cRepo;
+
 
     public void hello (){
         System.out.println("hello world!");
@@ -45,6 +51,12 @@ public class QuestionService {
         }
         else {System.out.println("Question already saved");}
         
+    }
+
+
+    public Iterable<CapitalModel> getCapitals(){
+        Iterable<CapitalModel> listAnswer = cRepo .findAll();
+        return listAnswer;
     }
     
 }

@@ -23,4 +23,7 @@ public class CapitalModel {
     @Column
     private String capital;
 
+    @Column
+    private String region;
+
 }

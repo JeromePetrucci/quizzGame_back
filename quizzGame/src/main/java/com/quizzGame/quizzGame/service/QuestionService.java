@@ -55,7 +55,7 @@ public class QuestionService {
 
 
     public Iterable<CapitalModel> getCapitals(){
-        Iterable<CapitalModel> listAnswer = cRepo .findAll();
+        Iterable<CapitalModel> listAnswer = cRepo.findAll( );
         return listAnswer;
     }
     

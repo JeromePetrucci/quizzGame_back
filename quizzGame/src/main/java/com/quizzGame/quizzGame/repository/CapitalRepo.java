@@ -9,6 +9,6 @@ import com.quizzGame.quizzGame.model.CapitalModel;
 
 @Repository
 public interface CapitalRepo extends CrudRepository<CapitalModel , Long> {
-    public Optional<CapitalModel> findById( String id);
+    public Optional<CapitalModel> findById( Integer id);
     
 }

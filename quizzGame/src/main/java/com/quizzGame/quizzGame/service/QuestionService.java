@@ -21,11 +21,6 @@ public class QuestionService {
     @Autowired
     private CapitalRepo cRepo;
 
-
-    public void hello (){
-        System.out.println("hello world!");
-    }
-
     public void getQuestionNumber(){
         long lines = qRepo.count();
         System.out.println(lines);
@@ -35,7 +30,6 @@ public class QuestionService {
         System.out.println(question);
         Optional<QuestionModel> quest = qRepo.findByQuestion(question);
         if (quest.isPresent()){
-            //System.out.println(quest.get().getQuestion());
             return quest.get();
         }
         else {
@@ -50,13 +44,10 @@ public class QuestionService {
             System.out.println("Question saved "+ createQuestion.getQuestion());
         }
         else {System.out.println("Question already saved");}
-        
     }
 
-
     public Iterable<CapitalModel> getCapitals(){
-        Iterable<CapitalModel> listAnswer = cRepo.findAll( );
-        return listAnswer;
+        return cRepo.findAll();
     }
     
 }

@@ -38,8 +38,7 @@ public class AnswerService {
     }
 
     public Iterable<AnswerModel> getStat(){
-        Iterable<AnswerModel> listAnswer = aRepo.findAll();
-        return listAnswer;
+        return aRepo.findAll();
     }
 
     

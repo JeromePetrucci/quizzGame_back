@@ -27,19 +27,4 @@ public class QuestionDTO {
     private String[] regions;
 
     private Boolean isNiche;
-    
-    public QuestionDTO(String category, String id, String correctAnswer, String[] incorrectAnswers, String question, String[] tags, 
-    String type, String difficulty, String[] regions, Boolean isNiche) {
-        this.category = category;
-        this.id=id;
-        this.correctAnswer=correctAnswer;
-        this.incorrectAnswers=incorrectAnswers;
-        this.question=question;
-        this.tags=tags;
-        this.type=type;
-        this.difficulty=difficulty;
-        this.regions=regions;
-        this.isNiche=isNiche;
-
-    }
 }

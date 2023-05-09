@@ -6,10 +6,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.quizzGame.quizzGame.model.CapitalModel;
+import com.quizzGame.quizzGame.model.DepartementModel;
 import com.quizzGame.quizzGame.model.QuestionDTO;
 import com.quizzGame.quizzGame.model.QuestionModel;
+import com.quizzGame.quizzGame.model.UsStateModel;
 import com.quizzGame.quizzGame.repository.CapitalRepo;
+import com.quizzGame.quizzGame.repository.DepartementRepo;
 import com.quizzGame.quizzGame.repository.QuizzGameRepo;
+import com.quizzGame.quizzGame.repository.StateRepo;
 
 
 @Service
@@ -20,6 +24,12 @@ public class QuestionService {
 
     @Autowired
     private CapitalRepo cRepo;
+
+    @Autowired
+    private DepartementRepo dRepo;
+
+    @Autowired
+    private StateRepo sRepo;
 
     public void getQuestionNumber(){
         long lines = qRepo.count();
@@ -48,6 +58,14 @@ public class QuestionService {
 
     public Iterable<CapitalModel> getCapitals(){
         return cRepo.findAll();
+    }
+
+    public Iterable<DepartementModel> getDepartement(){
+        return dRepo.findAll();
+    }
+
+    public Iterable<UsStateModel> getState(){
+        return sRepo.findAll();
     }
     
 }

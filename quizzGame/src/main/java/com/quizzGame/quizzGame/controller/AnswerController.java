@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.quizzGame.quizzGame.model.AnswerModel;
 import com.quizzGame.quizzGame.model.CapitalModel;
+import com.quizzGame.quizzGame.model.DepartementModel;
 import com.quizzGame.quizzGame.model.QuestionDTO;
+import com.quizzGame.quizzGame.model.UsStateModel;
 import com.quizzGame.quizzGame.service.AnswerService;
 import com.quizzGame.quizzGame.service.QuestionService;
 
@@ -47,6 +49,18 @@ public class AnswerController {
     @GetMapping("/getCapitals")
     public Iterable<CapitalModel> getCapital() {
         return qService.getCapitals();
+    }
+
+    @CrossOrigin(origins = "*")
+    @GetMapping("/getDepartement")
+    public Iterable<DepartementModel> getDepartement() {
+        return qService.getDepartement();
+    }
+
+    @CrossOrigin(origins = "*")
+    @GetMapping("/getState")
+    public Iterable<UsStateModel> getState() {
+        return qService.getState();
     }
     
 }
